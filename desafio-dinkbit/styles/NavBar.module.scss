@@ -1,0 +1,42 @@
+.container {
+  height: 400px;
+  background-color: #181818;
+  background-image: url("../public/images/circulo-28.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #fff;
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 100px;
+  }
+
+  a {
+    color: #fff;
+  }
+  .blog {
+    background-color: #fff;
+    a {
+      color: #0053f1 !important;
+      font-weight: 600;
+    }
+  }
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+    margin-left: 70px;
+    p {
+      color: #838383;
+    }
+    h1 {
+      font-size: 80px;
+      font-weight: bold;
+      padding: 0px;
+    }
+  }
+}
