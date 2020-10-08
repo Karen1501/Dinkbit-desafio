@@ -107,15 +107,20 @@ function PostDetail() {
           <Col>
             <h1>{post.title}</h1>
             <p>{post.date}</p>
-            <img src={post.img}></img>
+            <img src={post.img} className={styles.imgPost}></img>
             <p>{post.content}</p>
 
-            <Card>
-              <CardImg src={post.avatar}></CardImg>
-              <CardTitle>{post.author}</CardTitle>
-              <p>{post.role}</p>
-              <CardText>{post.cuote}</CardText>
+            <Card className={styles.cardPost}>
+              <CardTitle></CardTitle>
               <p></p>
+
+              <Card className={styles.infWrapper}>
+                <img src={post.avatar} className={styles.avatar} />
+                <div className={styles.info}>
+                  <h5>{post.author}</h5>
+                  <p> - {post.time}</p>
+                </div>
+              </Card>
             </Card>
           </Col>
         </Row>

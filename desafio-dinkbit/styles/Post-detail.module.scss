@@ -35,3 +35,44 @@
     font-size: 20px;
   }
 }
+
+.cardPost {
+  margin-top: 100px;
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  p {
+    color: rgb(170, 168, 168);
+    font-size: 18px;
+  }
+
+  .imgPost {
+    height: 10%;
+    width: 100%;
+  }
+  .avatar {
+    width: 7%;
+  }
+
+  .infWrapper {
+    display: flex;
+    flex-direction: row;
+    border: none;
+
+    .info {
+      margin-left: 10px;
+      text-align: center;
+
+      p {
+        color: rgb(170, 168, 168);
+      }
+    }
+  }
+}

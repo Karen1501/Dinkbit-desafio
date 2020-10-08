@@ -144,23 +144,26 @@ function Blog() {
                 <label>General</label>
               </InputGroupText>
               <hr />
+
               <h1>Top 5 Destacados</h1>
-              <ul className="list-group">
-                {posts
-                  .filter((post) => post.featured == true)
-                  .map((post, index) => {
-                    return (
-                      <li className="list-group-item border-none ">
-                        <h2 className="d-inline text-muted">0{index + 1}</h2>
-                        {post.title} <br />
-                        {post.date}
-                        <br />
-                        {post.time}
-                        <br />
-                      </li>
-                    );
-                  })}
-              </ul>
+              <div className={styles.list}>
+                <ul className="list-group">
+                  {posts
+                    .filter((post) => post.featured == true)
+                    .map((post, index) => {
+                      return (
+                        <li className="list-group-item border-none ">
+                          <h2 className="d-inline text-muted">0{index + 1}</h2>
+                          {post.title} <br />
+                          {post.date}
+                          <br />
+                          {post.time}
+                          <br />
+                        </li>
+                      );
+                    })}
+                </ul>
+              </div>
             </Col>
           </Row>
         </Container>
@@ -171,18 +174,11 @@ function Blog() {
               <h2> Suscríbete a nuestro Newsletter</h2>
               <div className={styles.input}>
                 {" "}
-                <span>
-                  <img
-                    alt="envelope"
-                    className={styles.icon}
-                    src="/envelope-solid.svg"
-                  />
-                </span>{" "}
                 <p>Correo electrónico</p>
               </div>
               <button> Suscribirme </button>
             </Col>
-            <Col sm="12" md="6" className={styles.imagen}>
+            <Col sm="12" md="6">
               <img alt="" src="/images/newsletter.png" />
             </Col>
           </Row>
