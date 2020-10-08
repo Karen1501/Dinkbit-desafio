@@ -1,7 +1,105 @@
 .cardPost {
   margin-top: 100px;
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  p {
+    color: rgb(170, 168, 168);
+    font-size: 18px;
+  }
 
   .imgPost {
     height: 10%;
+    width: 100%;
+  }
+  .avatar {
+    width: 7%;
+  }
+
+  .infWrapper {
+    display: flex;
+    flex-direction: row;
+    border: none;
+
+    .info {
+      margin-left: 10px;
+      text-align: center;
+
+      p {
+        color: rgb(170, 168, 168);
+      }
+    }
+  }
+}
+
+.input {
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+  label {
+    color: black;
+  }
+}
+
+.inputGroup {
+  background: white;
+  border: none;
+
+  label {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+}
+
+.newsletterContainer {
+  background-color: #0053f1;
+  width: 100%;
+  min-height: 400px;
+  color: #fff;
+  .text {
+    float: none !important;
+    padding: 10%;
+    h2 {
+      font-size: 5rem;
+      font-weight: 700;
+    }
+    .input {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      margin-bottom: 20px;
+      .icon {
+        filter: invert(100%);
+        width: 5%;
+        float: left;
+        margin: 10px;
+      }
+      p {
+        padding: 8px 5px 0px 5px;
+      }
+    }
+    button {
+      background-color: #fff;
+      color: #0053f1;
+      padding: 15px 50px;
+      font-weight: 600;
+      border: none;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+  }
+  .imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
   }
 }

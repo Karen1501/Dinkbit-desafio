@@ -1,5 +1,6 @@
 import styles from "../../styles/Home.module.scss";
-import MenuCarousel from "./Carousel.js";
+
+import Link from "next/link";
 
 import React, { useState } from "react";
 
@@ -64,7 +65,10 @@ const Menu = (props) => {
                   <NavLink href="/components/">Contacto</NavLink>
                 </NavItem>
                 <NavItem color="primary">
-                  <NavLink href="/components/" className={styles.blog}>
+                  <NavLink href="/Blog" className={styles.blog}>
+                    <Link href="/Blog">
+                      <a></a>
+                    </Link>
                     Blog
                   </NavLink>
                 </NavItem>
@@ -204,7 +208,7 @@ const Menu = (props) => {
             </Card>
 
             <Button size="lg" className={styles.btnBrand}>
-              Ver más{" "}
+              Ver más
               <img
                 src="/images/arrow-rightdark.png"
                 className={styles.arrowDark}
@@ -303,35 +307,68 @@ const Menu = (props) => {
               </h1>
             </div>
           </Col>
+
           <Col xs="6">
-            <Card className={styles.lastCard}>
-              <img src="/images/card-img-1.png" alt="Card image cap" />
-              <CardBody>
-                <h1>Las mejores prácticas para el diseño UX/UI de tu web</h1>
-                <p>
-                  <img src="/images/vaqueiro.svg" className={styles.avatar} />
-                  Por Jorge V.
-                </p>
-              </CardBody>
+            <Card className={`flex-row ${styles.cardLast}`}>
+              <Row>
+                <Col xs="4">
+                  <img
+                    className={styles.entryPic}
+                    src="/images/card-img-1.png"
+                    alt="Card image cap"
+                  />
+                </Col>
+                <Col xs="8">
+                  <CardBody>
+                    <h3 className="p-0 py-2 pr-2">
+                      Las mejores prácticas para el diseño UX/UI de tu web
+                    </h3>
+                    <p className="d-flex justify-content-between m-0">
+                      <img
+                        src="/images/vaqueiro.svg"
+                        className={styles.avatar}
+                      />
+                      Por Jorge V.
+                    </p>
+                  </CardBody>
+                </Col>
+              </Row>
             </Card>
           </Col>
+
           <Col xs="6">
-            <Card className={styles.lastCard}>
-              <img src="/images/card-img-2.png" alt="Card image cap" />
-              <CardBody>
-                <h1> La estrategía de marketing #1 para emprendimientos</h1>
-                <p>
-                  <img src="/images/pincho.svg" className={styles.avatar} />
-                  Por Luz E.
-                </p>
-              </CardBody>
+            <Card className={`flex-row ${styles.cardLast}`}>
+              <Row>
+                <Col xs="4">
+                  <img
+                    className={styles.entryPic}
+                    src="/images/card-img-2.png"
+                    alt="Card image cap"
+                  />
+                </Col>
+
+                <Col xs="8">
+                  <CardBody>
+                    <h3 className="p-0 py-2 pr-2">
+                      {" "}
+                      La estrategía de marketing #1 para emprendimientos
+                    </h3>
+                    <p className="d-flex justify-content-between m-0">
+                      <img src="/images/pincho.svg" className={styles.avatar} />
+                      Por Luz E.
+                    </p>
+                  </CardBody>
+                </Col>
+              </Row>
             </Card>
           </Col>
         </Row>
 
-        <Button>
-          Ver más articulos <img src="/images/arrow-rightdark.png" />
-        </Button>
+        <div className={styles.btnWrapper}>
+          <Button className={styles.btnCard}>
+            Ver más articulos <img src="/images/arrow-rightdark.png" />
+          </Button>
+        </div>
       </Container>
 
       <Container fluid={true} className={styles.footerContainer}>

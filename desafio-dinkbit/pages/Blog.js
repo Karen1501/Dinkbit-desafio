@@ -9,7 +9,6 @@ import {
   Card,
   CardImg,
   CardTitle,
-  CardText,
   Container,
   Row,
   Col,
@@ -48,7 +47,7 @@ function Blog() {
                 {posts.map((post) => {
                   return (
                     <>
-                      <Col>
+                      <Col md="12">
                         <Card className={styles.cardPost}>
                           <CardImg
                             src={post.img}
@@ -59,10 +58,15 @@ function Blog() {
                               <a>{post.title}</a>
                             </Link>
                           </CardTitle>
-                          <CardText>{post.content}</CardText>
-                          <img src={post.avatar} />
-                          <p>{post.author}</p>
-                          <p>{post.time}</p>
+                          <p>{post.content.slice(0, 190)}</p>
+
+                          <Card className={styles.infWrapper}>
+                            <img src={post.avatar} className={styles.avatar} />
+                            <div className={styles.info}>
+                              <h5>{post.author}</h5>
+                              <p> - {post.time}</p>
+                            </div>
+                          </Card>
                         </Card>
                         <hr />
                       </Col>
@@ -71,57 +75,73 @@ function Blog() {
                 })}
               </Row>
             </Col>
+
             <Col xs="4">
-              <Input addon type="search" aria-label="Buscar un artículo" />
+              <div className={styles.input}>
+                <label>Buscar un artículo</label>
+                <Input />
+              </div>
+
               <hr />
-              <h3>Filtros</h3>
-              <InputGroupText>
+
+              <div>
+                <h3>Filtros</h3>
+              </div>
+
+              <InputGroupText className={styles.inputGroup}>
+                <Input
+                  addon
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                  label="Todo"
+                />
+                <label>Todo</label>
+              </InputGroupText>
+
+              <InputGroupText className={styles.inputGroup}>
                 <Input
                   addon
                   type="checkbox"
                   aria-label="Checkbox for following text input"
                 />
-                <p>Todo</p>
+                <label>Dinkbit</label>
               </InputGroupText>
-              <InputGroupText>
-                <Input
-                  addon
-                  type="checkbox"
-                  aria-label="Checkbox for following text input"
-                />
-                <p>Dinkbit</p>
-              </InputGroupText>
-              <InputGroupText>
+
+              <InputGroupText className={styles.inputGroup}>
                 <Input
                   addon
                   type="checkbox"
                   label="Checkbox for following text input"
                 />
-                <p>Desarrollo Web</p>
+                <label>Desarrollo Web</label>
               </InputGroupText>
-              <InputGroupText>
+
+              <InputGroupText className={styles.inputGroup}>
                 <Input
                   addon
                   type="checkbox"
                   aria-label="Checkbox for following text input"
                 />
-                <p>Diseño, UI, UX</p>
+                <label>Diseño, UI/UX</label>
               </InputGroupText>
-              <InputGroupText>
+
+              <InputGroupText className={styles.inputGroup}>
                 <Input
                   addon
                   type="checkbox"
                   aria-label="Checkbox for following text input"
                 />
-                <p>Marketing Digital</p>
+                <label>Marketing Digital</label>
               </InputGroupText>
-              <InputGroupText>
+
+              <InputGroupText className={styles.inputGroup}>
                 <Input
                   addon
                   type="checkbox"
                   aria-label="Checkbox for following text input"
                 />
-                <p>General</p>
+
+                <label>General</label>
               </InputGroupText>
               <hr />
               <h1>Top 5 Destacados</h1>
@@ -146,17 +166,24 @@ function Blog() {
         </Container>
 
         <Container fluid={true}>
-          <Row>
-            <Col>
-              <Container>
-                <Col>
-                  <h1>Suscríbete a nuetro Newsletter</h1>
-                  <InputGroupText>@example.com</InputGroupText>
-                  <Button>
-                    Suscribirme <img></img>
-                  </Button>
-                </Col>
-              </Container>
+          <Row className={styles.newsletterContainer}>
+            <Col sm="12" md="6" className={styles.text}>
+              <h2> Suscríbete a nuestro Newsletter</h2>
+              <div className={styles.input}>
+                {" "}
+                <span>
+                  <img
+                    alt="envelope"
+                    className={styles.icon}
+                    src="/envelope-solid.svg"
+                  />
+                </span>{" "}
+                <p>Correo electrónico</p>
+              </div>
+              <button> Suscribirme </button>
+            </Col>
+            <Col sm="12" md="6" className={styles.imagen}>
+              <img alt="" src="/images/newsletter.png" />
             </Col>
           </Row>
         </Container>

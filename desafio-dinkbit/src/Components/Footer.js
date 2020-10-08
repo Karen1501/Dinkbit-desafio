@@ -70,15 +70,15 @@ function Footer() {
 
         <Row>
           <Col xs="12" sm="12" md="12" className={styles.footerIcons}>
-            <div>
-              <p>Aviso de privacidad Términos y condiciones</p>
-            </div>
+            <div className="py-5 d-flex justify-content-between align-items-center">
+              <p className="m-0">Aviso de privacidad Términos y condiciones</p>
 
-            <div className={styles.smallIcons}>
-              <img width="200px" src="/images/logos-23.svg" />
-              <img width="200px" src="/images/logos-24.svg" />
-              <img width="200px" src="/images/logos-25.svg" />
-              <img width="200px" src="/images/logos-26.svg" />
+              <div className={styles.smallIcons}>
+                <img width="150px" src="/images/logos-23.svg" />
+                <img width="150px" src="/images/logos-24.svg" />
+                <img width="150px" src="/images/logos-25.svg" />
+                <img width="150px" src="/images/logos-26.svg" />
+              </div>
             </div>
           </Col>
         </Row>
