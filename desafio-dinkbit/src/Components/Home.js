@@ -58,6 +58,7 @@ const Menu = (props) => {
                     <DropdownItem divider />
                   </DropdownMenu>
                 </UncontrolledDropdown>
+
                 <NavItem>
                   <NavLink href="/components/">Proyectos</NavLink>
                 </NavItem>
