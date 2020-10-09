@@ -1,0 +1,94 @@
+.footer {
+  background: black;
+  flex-direction: column;
+  width: auto;
+
+  .logo {
+    width: 115px;
+    display: flex;
+    text-align: left;
+    margin-top: 25px;
+  }
+
+  .iconContainer {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .icon {
+      padding-left: 30px;
+      flex-basis: 30px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 10px;
+    }
+    .icon1 {
+      background-image: url("../public/images/fb-icon.png");
+    }
+    .icon2 {
+      background-image: url("../public/images/twitter-icon.png");
+    }
+    .icon3 {
+      background-image: url("../public/images/be-icon.png");
+    }
+  }
+
+  .textWrapper {
+    margin-top: 140px;
+  }
+
+  .logoMex {
+    width: 100px;
+    display: flex;
+    text-align: left;
+    margin-top: 25px;
+    margin-right: 15px;
+    margin-left: -7px;
+    margin-bottom: 15px;
+  }
+
+  h5 {
+    color: white;
+  }
+  p {
+    color: gray;
+  }
+
+  .contactWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: flex-start;
+  }
+  .mail {
+    margin-right: 10px;
+  }
+  .phone {
+    margin-right: 10px;
+  }
+  .map {
+    margin-right: 10px;
+  }
+
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(202, 26, 26, 0.1);
+  }
+
+  .footerIcons {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    img {
+      width: 200px;
+    }
+  }
+}

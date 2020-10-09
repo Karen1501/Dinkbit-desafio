@@ -1,0 +1,9 @@
+/*paso a paso para pintar un post*/
+/* primero necesitamos la key del post que queremos pintar, ya lo tenemos guardado en la url pero hay que extraerlo de ahí*/
+
+/*usando la key, hacemos una peticion a nuestra base de datos para traer ese post*/
+
+/*guardamos la información del post en el state*/
+
+/*usamos el state en donde guardamos la información para pintarla dentro de nuestro componente*/
+
